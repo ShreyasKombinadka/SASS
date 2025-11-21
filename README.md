@@ -38,8 +38,8 @@ lib_deps =
 #include <SASS.h>
 
 void setup() {
-    uint64_t frame = 0b101101;
-    SASS_transmitter(5, 200, 6, frame);
+    uint64_t frame_t = 0b101101;
+    SASS_transmitter(5, 200, 6, frame_t);
 }
 
 void loop() {}
@@ -49,14 +49,14 @@ void loop() {}
 ```cpp
 #include <SASS.h>
 
-uint64_t rx = 0;
+uint64_t frame_r = 0;
 
 void setup() {
     pinMode(4, INPUT);
 }
 
 void loop() {
-    SASS_receiver(4, 200, 6, rx);
+    SASS_receiver(4, 200, 6, frame_r);
 }
 ```
 
@@ -77,7 +77,7 @@ Receives a frame and writes the value into `frame`.
 ```
 Idle ─ HIGH
 Start ─ LOW
-Data  ─ L bits (LSB first)
+Data  ─ L bits (LSB first) with each bit being active T time.
 Stop  ─ LOW
 Idle ─ HIGH
 ```
