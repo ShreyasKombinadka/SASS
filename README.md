@@ -1,7 +1,9 @@
 # SASS — Single Asynchronous Serial Stream Protocol
 
 SASS is a minimal, single-wire, low-speed asynchronous protocol for microcontroller communication.  
-This Arduino library provides a simple transmitter and receiver implementation.
+This a library provides a simple transmitter and receiver implementation.
+
+**Version : 1.0.1**
 
 ---
 
